@@ -210,7 +210,6 @@ based on 1080x1080
    </variant>
    <variant name="
       gamelist-list-cover,
-      gamelist-list-physicalmedia,
       ">
       <view name="
          gamelist
@@ -221,6 +220,118 @@ based on 1080x1080
             <imageMaxSize>0.40740741 0.74074074</imageMaxSize><!-- 440 800 -->
          </video>
       </view>
+   </variant>
+   <!-- Physical media (big) with concise metadata strip -->
+   <variant name="
+      gamelist-list-physicalmedia,
+      ">
+      <view name="
+         gamelist
+         ">
+         <video name="
+            game-video
+            ">
+            <pos>0.75 0.36111111</pos><!-- 75% 390 -->
+            <imageMaxSize>0.48148148 0.64814815</imageMaxSize><!-- 520 700 -->
+            <maxSize>0.48148148 0.64814815</maxSize><!-- 520 700 -->
+         </video>
+         <image name="
+            game-metadata-background,
+            game-metadata-background-shade
+            ">
+            <pos>0.50925926 0.71296296</pos><!-- 550 770 -->
+            <size>0.48148148 0.25</size><!-- 520 270 -->
+            <visible>true</visible>
+         </image>
+         <text name="
+            game-rating-label,
+            game-genre-label,
+            game-players-label,
+            game-last-played-label
+            ">
+            <origin>0.5 1</origin>
+            <size>0.24074074 ${gamelistMetadataFontSize}</size><!-- 260 -->
+            <fontSize>${gamelistMetadataFontSize}</fontSize>
+            <visible>true</visible>
+         </text>
+         <text name="
+            game-genre,
+            game-players
+            ">
+            <origin>0.5 0</origin>
+            <size>0.24074074 ${gamelistMetadataFontSize}</size><!-- 260 -->
+            <fontSize>${gamelistMetadataFontSize}</fontSize>
+            <visible>true</visible>
+         </text>
+         <datetime name="
+            game-last-played
+            ">
+            <origin>0.5 0</origin>
+            <size>0.24074074 ${gamelistMetadataFontSize}</size><!-- 260 -->
+            <fontSize>${gamelistMetadataFontSize}</fontSize>
+            <displayRelative>false</displayRelative>
+            <visible>true</visible>
+         </datetime>
+         <text name="
+            game-rating-label
+            ">
+            <pos>0.62962963 0.78703704</pos><!-- 680 850 -->
+         </text>
+         <rating name="
+            game-rating
+            ">
+            <origin>0.5 0.5</origin>
+            <pos>0.62962963 0.81203704</pos><!-- 680 877 -->
+            <size>0 ${gamelistMetadataRatingSize}</size>
+            <visible>true</visible>
+         </rating>
+         <text name="
+            game-genre-label
+            ">
+            <pos>0.87037037 0.78703704</pos><!-- 940 850 -->
+         </text>
+         <text name="
+            game-genre
+            ">
+            <pos>0.87037037 0.79537037</pos><!-- 940 859 -->
+         </text>
+         <text name="
+            game-players-label
+            ">
+            <pos>0.62962963 0.87962963</pos><!-- 680 950 -->
+         </text>
+         <text name="
+            game-players
+            ">
+            <pos>0.62962963 0.88796296</pos><!-- 680 959 -->
+         </text>
+         <text name="
+            game-last-played-label
+            ">
+            <pos>0.87037037 0.87962963</pos><!-- 940 950 -->
+         </text>
+         <datetime name="
+            game-last-played
+            ">
+            <pos>0.87037037 0.88796296</pos><!-- 940 959 -->
+         </datetime>
+      </view>
+      <fontSize name="
+         medium
+         ">
+         <variables>
+            <gamelistMetadataRatingSize>0.03148148</gamelistMetadataRatingSize><!-- 34 -->
+            <gamelistMetadataFontSize>0.03333333</gamelistMetadataFontSize><!-- 36 -->
+         </variables>
+      </fontSize>
+      <fontSize name="
+         large
+         ">
+         <variables>
+            <gamelistMetadataRatingSize>0.03148148</gamelistMetadataRatingSize><!-- 34 -->
+            <gamelistMetadataFontSize>0.03333333</gamelistMetadataFontSize><!-- 36 -->
+         </variables>
+      </fontSize>
    </variant>
    <variant name="
       gamelist-list-screenshot-marquee,
